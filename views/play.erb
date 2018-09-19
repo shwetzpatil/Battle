@@ -1,0 +1,5 @@
+<h1><%=@player1%> vs <%=@player2%></h1>
+<h2><%= @player2%>'s Hit Points: <%= @player2_points%></h2>
+<form action="/hit2" method="post">
+  <input type="submit" value="Kick <%= @player2%>">
+</form>

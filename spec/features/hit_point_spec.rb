@@ -1,9 +1,12 @@
 feature 'Hit Point' do 
   scenario "seeing player2's Hit Points" do
-    visit('/')
-    fill_in('player1_name', with: "Seb")
-    fill_in('player2_name', with: "Shweta")
-    click_button "Submit"
+    sign_in_and_play
     expect(page).to have_content("Shweta's Hit Points: 100")
+  end
+
+  scenario ' attack Player 2, and get a confirmation' do
+    sign_in_and_play
+    click_button('Kick Shweta')
+    expect(page).to have_content("Shweta's Hit Points: 80")
   end
 end

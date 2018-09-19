@@ -6,9 +6,7 @@ class Battle < Sinatra::Base
   enable :sessions
   
   get '/' do
-    session[:player2_points] = 100
     erb(:index)
-
   end
 
   get '/play' do

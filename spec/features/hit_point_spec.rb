@@ -7,6 +7,6 @@ feature 'Hit Point' do
   scenario ' attack Player 2, and get a confirmation' do
     sign_in_and_play
     click_button('Kick Shweta')
-    expect(page).to have_content("Shweta's Hit Points: 80")
+    expect(page).to have_content("Shweta's Hit Points: 90")
   end
 end
